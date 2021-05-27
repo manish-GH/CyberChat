@@ -1,13 +1,319 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+}
+
+.navbar {
+  height: 5vh;
+  padding: 0.6rem 1rem;
+
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 5px 0px rgba(52, 53, 48, 0.23);
+}
+
+.sticky {
+  top: 0;
+  position: sticky;
+}
+
+.navbar h1 {
+  color: rgba(195, 51, 100);
+}
+
+.action-btns {
+  display: flex;
+}
+
+.moon:hover,
+.sun:hover {
+  cursor: pointer;
+}
+
+.moon {
+  color: white;
+}
+
+.signOut-btn {
+  margin-left: 1.5rem;
+  margin-right: 0.6rem;
+  color: rgba(195, 51, 100);
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.signOut-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(195, 51, 100);
+}
+
+.signIn-container {
+  height: 93vh !important;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  height: 20px;
+  width: 20px;
+  padding-right: 8px;
+}
+
+.signIn {
+  width: 80vw;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.27);
+  max-width: 550px;
+  max-height: 200px;
+  margin: auto;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signIn-head {
+  font-size: 2.5rem;
+}
+
+.signIn-main {
+  margin: 15px auto;
+  font-size: 1.3rem;
+}
+
+.signIn-btn {
+  margin-top: 10px;
+  width: 60vw;
+  max-width: 200px;
+  padding: 10px 0px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.27);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signIn-btn:hover {
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+}
+
+.new-msg {
+  max-width: 800px;
+  bottom: 0;
+  position: sticky;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-msg {
+  max-width: 800px;
+  box-shadow: 0px 0px 20px 0px rgba(195, 51, 100, 0.7);
+  border-radius: 20px;
+  height: 50vh;
+  width: 50vw;
+  top: 25vh;
+  left: 25vw;
+  position: fixed;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(226, 225, 225);
+}
+
+.modal {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.old-msg p {
+  text-align: center;
+  max-width: 700px;
+  padding: 10px;
+  max-height: 15vh;
+  overflow-y: scroll;
+}
+
+.old-msg p::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  max-width: 700px;
+  border: none;
+  border-radius: 20px;
+  width: 45vw;
+  height: 15vh;
+  padding: 10px;
+  margin: 15px;
+  outline: none;
+  text-align: center;
+  background-color: rgb(209, 209, 209);
+}
+
+.old-msg h2,
+.updated-msg h2 {
+  text-align: center;
+  color: rgba(195, 51, 100);
+}
+
+.update-delete-btn {
+  height: 1.8rem;
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.update-btn,
+.delete-btn {
+  width: 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: rgb(141, 201, 52);
+  color: white;
+}
+
+.delete-btn {
+  color: white;
+  background-color: #ff6666;
+}
+
+.new-msg-text,
+.new-msg-btn {
+  border: none;
+  padding: 12px 5px;
+  background-color: rgb(228, 228, 228);
+  outline: none;
+}
+
+.new-msg-btn {
+  width: 5rem;
+  flex: 1;
+  border-radius: 0 10px 10px 0;
+}
+
+.new-msg-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.new-msg-text {
+  flex: auto;
+  border-radius: 10px 0 0 10px;
+}
+
+.message {
+  padding: 5px 2px;
+  border-radius: 10px;
+  display: flex;
+  margin: 30px 0 20px 25px;
+}
+
+.message:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.display-pic {
+  border-radius: 100%;
+}
+
+.display-info {
+  display: flex;
+  margin-left: 10px;
+}
+
+.display-name {
+  color: rgba(195, 51, 100);
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.display-time {
+  color: rgb(121, 121, 121);
+  font-size: 0.75rem;
+}
+
+.display-text {
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.dark .App,
+.dark .navbar,
+.dark .signOut-btn,
+.dark .chat,
+.dark .signIn-container {
+  background-color: rgba(54, 57, 63);
+}
+
+.dark .navbar {
+  box-shadow: 0px 3px 5px 0px rgba(32, 32, 31, 0.23) !important;
+}
+
+.dark .signIn {
+  background-color: rgb(41, 43, 47);
+}
+
+.dark .chat {
+  border: 1px solid rgba(54, 57, 63);
+}
+
+.dark .modal {
+  background-color: rgb(74, 78, 85);
+  border-radius: 20px;
+}
+.dark textarea {
+  background-color: rgb(84, 88, 95);
+  text-align: center;
+  border: none;
+}
+
+.dark .signIn-head,
+.dark .signIn-main,
+.dark .old-msg p,
+.dark textarea {
+  color: white;
+}
+
+.dark .message:hover {
+  background-color: rgb(76, 77, 78) !important;
+}
+.dark .signOut-btn:hover {
+  background-color: rgba(195, 51, 100);
+}
+.dark .display-text {
+  color: white;
+}
+.chat {
+  flex: auto;
 }
