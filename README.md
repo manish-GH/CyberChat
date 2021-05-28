@@ -2,7 +2,7 @@
 
 CyberChat is a chat app developed using ReactJs and Firebase
 
-**Click [Here](https://kind-leakey-7967f7.netlify.app/) to give it a try or watch the [Demo](https://youtu.be/THZnBjy-zbE)**
+**Click [Here](https://cyberchat-app.netlify.app/) to give it a try or watch the [Demo](https://youtu.be/THZnBjy-zbE)**
 
 
 
